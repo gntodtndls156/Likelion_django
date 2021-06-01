@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Member Home</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            background-color: black;
+            border: 1px solid gray;
+            text-align: center;
+            color: white;
+            
+        }
+    </style>
+</head>
+<body>
+    <table width="1000" border="1">
+        <tr>
+            <th colspan="6" style="background-color:orange; color: blueviolet">
+                Member
+            </th>
+        </tr>
+        <tr style="background-color: palegoldenrod; color:black">
+            <th>회원번호</th>
+            <th>이름</th>
+            <th>전공</th>
+            <th>멋사 기수</th>
+            <th>나이</th>
+            <th>이메일</th>
+        </tr>
+        {% for obj in Member %}
+        <tr>
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.name }}</td>
+            <td>{{ obj.major }}</td>
+            <td>{{ obj.year }}</td>
+            <td>{{ obj.old }}</td>
+            <td>{{ obj.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
